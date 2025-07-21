@@ -134,7 +134,7 @@ function App() {
 
       if (!response.ok) throw new Error("Failed to save schema");
 
-      const data = await response.json();
+      //const data = await response.json();
       alert("Schema saved successfully!");
 
       // Reset form

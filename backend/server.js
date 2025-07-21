@@ -5,6 +5,13 @@ const bodyParser = require('body-parser');
 const schemaRoutes = require('./routes/schemaRoutes');
 
 const app = express();
+app.use(cors(
+  {
+    origin : ["https://json-schema-builder-ryg8.vercel.app"],
+    methods : ["POST" , "GET"],
+    credentials : true
+  }
+  ));
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
